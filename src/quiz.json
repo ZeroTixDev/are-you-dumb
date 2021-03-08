@@ -1,5 +1,5 @@
 {
-	"startText": "developed by ZeroTix",
+	"startText": "developed by ZeroTix (who is trash)",
 	"quizLength": 10,
 	"quiz": [
 		{
@@ -54,17 +54,17 @@
 			"question": "Is ZeroTix Pro",
 			"answers": [
 				{
-					"name": "yes",
+					"name": "no",
 					"color": "red",
 					"correct": true
 				},
 				{
-					"name": "obviously",
+					"name": "nope",
 					"color": "blue",
 					"correct": true
 				}
 			],
-			"correctText": "Makes sense"
+			"correctText": "Yeah he's trash af"
 		},
 		{
 			"question": "Who created Skap.io?",
@@ -101,7 +101,6 @@
 				{
 					"name": "Rust",
 					"color": "brown",
-					"correct": true
 				},
 				{
 					"name": "ew programming sucks",
@@ -174,7 +173,6 @@
 				{
 					"name": "Corola",
 					"color": "red",
-					"correct": true
 				},
 				{
 					"name": "i hate games",
@@ -183,7 +181,6 @@
 				{
 					"name": "Rocket League",
 					"color": "brown",
-					"correct": true
 				}
 			],
 			"correctText": "Yes, that is indeed the best game",
@@ -194,27 +191,27 @@
 			"answers": [
 				{
 					"name": "Yes",
-					"color": "red",
-					"correct": true
+					"color": "red"
 				},
 				{
 					"name": "No",
-					"color": "blue"
+					"color": "blue",
+					"correct": true
 				}
 			],
 			"correctText": "Wow, you are a great intelligent human being :)",
-			"wrongText": "FUCK FUCK FUCK WHAT ARE YOU DOING WITH YOUR LIFE, SUBSCRIBE TO ZEROTIX YOU IDIOT, HURRY UP AND SUBSCRIBE OMG FUCK YOU (ALSO FUCK YOU WEBPACK) GO SUBSCRBE AND LIKE AND COMMENT AND WATCH EVERY SINGLE FUCKING VIDEO AND THIS TEXT WONT END UNTIL YOU SUBSCRIBE TO ZEROTIX PLS DO IT... OR ELSE.. NOW TO CONTINUE THE QUIZ.. IM DEFINITELY SURE THAT YOU WILL FAIL, YOU ARE TOO DUMB"
+			"wrongText": "FUCK FUCK FUCK WHAT ARE YOU DOING WITH YOUR LIFE, UNSUBSCRIBE TO ZEROTIX YOU IDIOT, HURRY UP AND UNSUBSCRIBE OMG FUCK YOU (ALSO FUCK YOU WEBPACK) GO UNSUBSCRBE AND DISLIKE AND FLAG AND DONT WATCH ANY SINGLE FUCKING VIDEO AND THIS TEXT WONT END UNTIL YOU UNSUBSCRIBE TO ZEROTIX PLS DO IT... OR ELSE.. NOW TO CONTINUE THE QUIZ.. IM DEFINITELY SURE THAT YOU WILL FAIL, YOU ARE TOO DUMB"
 		},
 		{
 			"question": "Are you stupid?",
 			"answers": [
 				{
-					"name": "obviously",
+					"name": "no",
 					"color": "red",
 					"correct": true
 				},
 				{
-					"name": "definitely",
+					"name": "definetly not",
 					"color": "blue",
 					"correct": true
 				}
