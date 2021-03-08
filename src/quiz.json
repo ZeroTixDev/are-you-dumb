@@ -1,5 +1,6 @@
 {
-	"startText": "Good luck!",
+	"startText": "developed by ZeroTix",
+	"quizLength": 10,
 	"quiz": [
 		{
 			"question": "Which of these shapes have 3 sides?",
@@ -21,10 +22,12 @@
 					"color": "green",
 					"correct": true
 				}
-			]
+			],
+			"correctText": "Wow, you are not as DUMB as I thought",
+			"wrongText": "You are VERY DUMB, Great Job!"
 		},
 		{
-			"question": "Which planet do humans live?",
+			"question": "Which planet do humans live on?",
 			"answers": [
 				{
 					"name": "not earth",
@@ -35,15 +38,188 @@
 					"color": "blue"
 				},
 				{
-					"name": "obviously the sun",
-					"color": "yellow"
-				},
-				{
 					"name": "earth",
 					"color": "green",
 					"correct": true
+				},
+				{
+					"name": "obviously the sun",
+					"color": "yellow"
 				}
-			]
+			],
+			"correctText": "Of course, where else would we live?",
+			"wrongText": "Cmon, are you doing this on PURPOSE?"
+		},
+		{
+			"question": "Is ZeroTix Pro",
+			"answers": [
+				{
+					"name": "yes",
+					"color": "red",
+					"correct": true
+				},
+				{
+					"name": "obviously",
+					"color": "blue",
+					"correct": true
+				}
+			],
+			"correctText": "Makes sense"
+		},
+		{
+			"question": "Who created Skap.io?",
+			"answers": [
+				{
+					"name": "nooky",
+					"color": "red"
+				},
+				{
+					"name": "mathletesv",
+					"color": "blue"
+				},
+				{
+					"name": "that redvelvetfett guy",
+					"color": "yellow",
+					"correct": true
+				},
+				{
+					"name": "obviously stovoy",
+					"color": "green"
+				}
+			],
+			"correctText": "WOW you are COOL",
+			"wrongText": "bruh wtf"
+		},
+		{
+			"question": "What is the best programming language?",
+			"answers": [
+				{
+					"name": "Javascript",
+					"color": "blue",
+					"correct": true
+				},
+				{
+					"name": "Rust",
+					"color": "brown",
+					"correct": true
+				},
+				{
+					"name": "ew programming sucks",
+					"color": "red"
+				},
+				{
+					"name": "Python",
+					"color": "green"
+				}
+			],
+			"correctText": "Okay, so you aren't idiot :D",
+			"wrongText": "you know what... fuck you"
+		},
+		{
+			"question": "How long did ZeroTix work on this?",
+			"answers": [
+				{
+					"name": "1 year",
+					"color": "red"
+				},
+				{
+					"name": "1 minute :sunglasses:",
+					"color": "green"
+				},
+				{
+					"name": "about 4 hours /shrug",
+					"color": "blue"
+				},
+				{
+					"name": "IM NOT DONE YET",
+					"color": "brown",
+					"correct": true
+				}
+			],
+			"correctText": "Ah ok, you are right",
+			"wrongText": "1 year?? definitely not. 1 minute? nah"
+		},
+		{
+			"question": "What is 1 * 2 - 5 / 5 - 4 * 20",
+			"answers": [
+				{
+					"name": "fuck i dont have calculator",
+					"color": "blue"
+				},
+				{
+					"name": "0",
+					"color": "red"
+				},
+				{
+					"name": "-79",
+					"color": "green",
+					"correct": true
+				},
+				{
+					"name": "79",
+					"color": "brown"
+				}
+			],
+			"correctText": "You used a calculator didn't you... what a noob",
+			"wrongText": "bruh why didn't you use calculator, you are DUMB"
+		},
+		{
+			"question": "What is the best game ever?",
+			"answers": [
+				{
+					"name": "Skap.io",
+					"color": "blue",
+					"correct": true
+				},
+				{
+					"name": "Corola",
+					"color": "red",
+					"correct": true
+				},
+				{
+					"name": "i hate games",
+					"color": "green"
+				},
+				{
+					"name": "Rocket League",
+					"color": "brown",
+					"correct": true
+				}
+			],
+			"correctText": "Yes, that is indeed the best game",
+			"wrongText": "fuck you"
+		},
+		{
+			"question": "Are you subscribed to ZeroTix",
+			"answers": [
+				{
+					"name": "Yes",
+					"color": "red",
+					"correct": true
+				},
+				{
+					"name": "No",
+					"color": "blue"
+				}
+			],
+			"correctText": "Wow, you are a great intelligent human being :)",
+			"wrongText": "FUCK FUCK FUCK WHAT ARE YOU DOING WITH YOUR LIFE, SUBSCRIBE TO ZEROTIX YOU IDIOT, HURRY UP AND SUBSCRIBE OMG FUCK YOU (ALSO FUCK YOU WEBPACK) GO SUBSCRBE AND LIKE AND COMMENT AND WATCH EVERY SINGLE FUCKING VIDEO AND THIS TEXT WONT END UNTIL YOU SUBSCRIBE TO ZEROTIX PLS DO IT... OR ELSE.. NOW TO CONTINUE THE QUIZ.. IM DEFINITELY SURE THAT YOU WILL FAIL, YOU ARE TOO DUMB"
+		},
+		{
+			"question": "Are you stupid?",
+			"answers": [
+				{
+					"name": "obviously",
+					"color": "red",
+					"correct": true
+				},
+				{
+					"name": "definitely",
+					"color": "blue",
+					"correct": true
+				}
+			],
+			"correctText": "LOL you admit it, i guess theres no need to finish the quiz LOL"
 		}
 	]
 }

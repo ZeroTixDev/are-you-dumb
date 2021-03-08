@@ -13,14 +13,36 @@ Array.prototype.shuffle = function () {
 
 const ref = require('./references.js');
 const game = require('./quiz.json');
-const state = { questions: game.quiz.length, quiz: game.quiz.shuffle(), questionIndex: 0, typingSpeed: 15 };
+const state = {
+   questions: game.quizLength,
+   quiz: game.quiz.shuffle(),
+   questionIndex: 0,
+   typingSpeed: 20,
+   questionsDone: 0,
+   questionsCorrect: 0,
+   done: false,
+};
 
 state.init = function (index) {
+   if (state.done) return;
    ref.gameContent.innerHTML = '';
    state.questionIndex = index;
    if (ref.questionCounter.classList.contains('hidden')) {
       ref.questionCounter.classList.remove('hidden');
-      ref.questionCounter.innerHTML = `${state.questionIndex}/${state.questions}`;
+   }
+   ref.questionCounter.innerHTML = `${state.questionsDone}/${state.questions}`;
+   if (index >= state.questions) {
+      // quiz is done, end screen
+      state.done = true;
+      ref.questionCounter.innerHTML = `DUMB`;
+      ref.gameContent.innerHTML = '<h1 class="startText" style="font-size: 1rem;"></h1>';
+      typeWriter(
+         `Hello, it is I, ZeroTix, here to tell you the score you got.. only ${
+            (state.questionsCorrect / state.questions) * 100
+         }% accuracy? This is just the easiest version.. WOW you are really are DUMB huh? YOU FAILED`,
+         document.querySelector('.game .content .startText')
+      );
+      return;
    }
    makeQuestion(state.quiz[index], ref.gameContent);
 };
@@ -62,21 +84,59 @@ function colorize(text) {
       return '#5dc750';
    } else if (text === 'cyan') {
       return '#8cdbda';
+   } else if (text === 'brown') {
+      return '#52241c';
    }
    return null;
 }
 
 function makeQuestion(problem, element) {
    element.innerHTML += `<h1 class="question">${problem.question}</h1>`;
-   const answers = [...problem.answers]
-      .shuffle()
-      .reduce(
-         (old, answer) =>
-            old +
-            `<div class="answer" style="background-color: ${colorize(answer.color) ?? colorize('red')}">${
-               answer.name
-            }</div>`,
-         ``
-      );
-   element.innerHTML += `<div class="answers">${answers}</div>`;
+   const answers = [...problem.answers];
+   const divs = [];
+   let boxDiv = null;
+   for (let i = 0; i < answers.length; i++) {
+      const answer = answers[i];
+      const div = document.createElement('div');
+      div.addEventListener('click', () => {
+         if (answer.correct) {
+            state.questionsCorrect++;
+         }
+         state.questionsDone++;
+         state.questionIndex++;
+         ref.gameContent.innerHTML = '<h1 class="startText"></h1>';
+         ref.questionCounter.innerHTML = `${state.questionsDone}/${state.questions}`;
+         typeWriter(
+            answer.correct ? problem.correctText : problem.wrongText,
+            document.querySelector('.game .content .startText')
+         );
+      });
+      div.classList.add('answer');
+      div.style.backgroundColor = colorize(answer.color) ?? colorize('red');
+      div.innerText = answer.name;
+      divs.push(div);
+   }
+   if (divs.length === 2) {
+      boxDiv = document.createElement('div');
+      boxDiv.classList.add('answers');
+      boxDiv.style.height = '250px';
+      appendElements(divs, boxDiv);
+   }
+   const answerBox = document.createElement('div');
+   answerBox.classList.add('answers');
+   if (boxDiv) {
+      appendElements([boxDiv], answerBox);
+   }
+   appendElements([answerBox], element);
+   if (boxDiv) {
+      appendElements(divs, boxDiv);
+   } else {
+      appendElements(divs, answerBox);
+   }
+}
+
+function appendElements(children, parent) {
+   for (let i = 0; i < children.length; i++) {
+      parent.appendChild(children[i]);
+   }
 }
