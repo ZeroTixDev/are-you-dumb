@@ -1,0 +1,49 @@
+{
+	"startText": "Good luck!",
+	"quiz": [
+		{
+			"question": "Which of these shapes have 3 sides?",
+			"answers": [
+				{
+					"name": "Square",
+					"color": "red"
+				},
+				{
+					"name": "Rectangle",
+					"color": "blue"
+				},
+				{
+					"name": "Shapes can't have 3 sides",
+					"color": "yellow"
+				},
+				{
+					"name": "Triangle",
+					"color": "green",
+					"correct": true
+				}
+			]
+		},
+		{
+			"question": "Which planet do humans live?",
+			"answers": [
+				{
+					"name": "not earth",
+					"color": "red"
+				},
+				{
+					"name": "cant be earth",
+					"color": "blue"
+				},
+				{
+					"name": "obviously the sun",
+					"color": "yellow"
+				},
+				{
+					"name": "earth",
+					"color": "green",
+					"correct": true
+				}
+			]
+		}
+	]
+}

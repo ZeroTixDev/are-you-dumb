@@ -1,0 +1,159 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+   supported by Chrome, Edge, Opera and Firefox ( this is just no select)*/
+}
+body {
+	font-size:16px;
+	font-family: consolas;
+	background-color: #03122e;
+}
+
+.menu, .game, .game .content{
+	background-color: #03122e;
+	position: absolute;
+	left: 0;
+	top: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+}
+
+.game .content {
+	background-color: #031b36;
+}
+
+.game .startText {
+	transition: all 0.5s ease-in-out;
+}
+
+.game .question {
+	position: absolute;
+	top: 50px;
+}
+
+.answers {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	height: 500px;
+	width: 1000px;
+}
+
+.answer {
+	width: 450px;
+	height: 200px;
+	margin: 20px;
+	font-size: 1.7rem;
+	transition: all 0.3s linear;
+	cursor: pointer;
+	filter: saturate(90%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 450px 200px;
+}
+
+.answer:hover {
+	filter: saturate(200%);
+	font-weight: bold;
+	font-size: 1.9rem;
+}
+
+.game .questionCounter {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 10px;
+	background-color: white;
+	color: black;
+	font-size: 1.2rem;
+	letter-spacing: 0.2rem;
+	border-radius: 5px;
+	z-index: 5;
+}
+
+.wavy {
+	position: relative;
+}
+
+.wavy span {
+	position: relative;
+	display: inline-block;
+	color: white;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	animation: animateWave 1s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animateWave {
+	0% {
+		transform: translateY(0px);
+	}
+	20% {
+		transform: translateY(-30px);
+	}
+	40%, 100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes pulse {
+  0% { padding: 25px; }
+  50% { padding: 40px; }
+  100% { padding: 25px; }
+}
+
+@keyframes shake {
+  0% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+  100% { transform: rotate(4deg); }
+}
+
+.play {
+	background-color: transparent;
+	border: 10px solid white;
+	border-radius: 7px;
+	cursor: pointer;
+	margin: 10px;
+	animation: pulse 1s ease-in-out infinite, shake 0.5s ease-in-out infinite;
+}
+
+.play:hover {
+	background-color: #0ee37f;
+}
+
+.play .arrow-right {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 26px solid white;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid white;
+}
+
+.title {
+	margin: 40px;
+}
+
+.hidden {
+	display: none;
+}
